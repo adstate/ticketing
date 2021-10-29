@@ -1,9 +1,8 @@
 import express, { Request, Response } from 'express';
 import { body } from 'express-validator';
-import { BadRequestError } from '../errors/bad-request-error';
 import jwt from 'jsonwebtoken';
+import { validateRequest, BadRequestError } from '@_ftickets/common';
 
-import { validateRequest } from '../middlewars/validate-request';
 import { User } from '../models/user';
 import { Password } from '../services/password';
 
